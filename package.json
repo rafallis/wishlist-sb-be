@@ -1,6 +1,6 @@
 {
   "name": "wishlist-sb-be",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Backend que controla um sistema de Wishlist para e-commerce",
   "scripts": {
     "git-add-commit": "git add . && git commit -m",
