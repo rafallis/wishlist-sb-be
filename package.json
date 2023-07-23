@@ -1,0 +1,55 @@
+{
+  "name": "wishlist-sb-be",
+  "version": "1.1.0",
+  "description": "Backend que controla um sistema de Wishlist para e-commerce",
+  "scripts": {
+    "git-add-commit": "git add . && git commit -m",
+    "git-flow-update": "git fetch origin develop:develop && git fetch origin main:main",
+    "git-flow-push": "git push origin develop:develop && git push origin main:main",
+    "mvn:setversion": "mvn versions:set -DnewVersion=%npm_package_version% -DgenerateBackupPoms=false && npm run git-add-commit -- \"chore(pom): newVersion\"",
+    "hotfix-win:version": "git pull origin && standard-version && npm run mvn:setversion && git push origin && git push origin --tags && npm run hotfix:finish",
+    "hotfix-win:finish": "npm run git-flow-update && git flow hotfix finish -n %npm_package_version% && npm run git-flow-push",
+    "release-win:version": "git pull origin && standard-version && npm run mvn:setversion && git push origin && git push origin --tags && npm run release:finish",
+    "release-win:finish": "npm run git-flow-update && git flow release finish -n %npm_package_version% && npm run git-flow-push",
+    "mvn-macLinux:setversion": "mvn versions:set -DnewVersion=$npm_package_version -DgenerateBackupPoms=false && npm run git-add-commit -- \"chore(pom): newVersion\"",
+    "hotfix-macLinux:version": "git pull origin && standard-version && npm run mvn-macLinux:setversion && git push origin && git push origin --tags && npm run hotfix-macLinux:finish",
+    "hotfix-macLinux:finish": "npm run git-flow-update && git flow hotfix finish -n $npm_package_version && npm run git-flow-push",
+    "release-macLinux:version": "git pull origin && standard-version && npm run mvn-macLinux:setversion && git push origin && git push origin --tags && npm run release-macLinux:finish",
+    "release-macLinux:finish": "npm run git-flow-update && git flow release finish -n $npm_package_version && npm run git-flow-push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rafallis/wishlist-sb-be.git"
+  },
+  "keywords": [
+    "spring",
+    "java",
+    "mongodb",
+    "nosql",
+    "wishlist",
+    "e-commerce"
+  ],
+  "author": "Rafael Falcão",
+  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.1.2",
+    "@commitlint/config-conventional": "17.1.0",
+    "husky": "8.0.1",
+    "next-standard-version": "3.0.8",
+    "prettier": "2.7.1",
+    "prettier-plugin-java": "^1.6.2",
+    "pretty-quick": "3.1.3",
+    "standard-version": "9.3.2"
+  }
+}
