@@ -37,7 +37,7 @@ public class WishlistControllerTest {
     @Test
     public void testFindWishlistByClientDocument() {
         ResponseDTO responseDTO = new ResponseDTO(new ResponseDTO.Message(HttpStatus.OK.value(), "Wishlist Found"), wishlistDTO);
-        when(wishlistService.findWishlistByClientDocumento(anyString())).thenReturn(responseDTO);
+        when(wishlistService.findWishlistByClienteDocumento(anyString())).thenReturn(responseDTO);
 
         ResponseEntity<ResponseDTO> response = wishlistController.findWishlistByClientDocument("12345678900", "");
         assertEquals(HttpStatus.OK, response.getStatusCode());

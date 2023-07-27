@@ -31,7 +31,7 @@ public class WishlistController {
         try {
             ResponseDTO response;
             if (codbarra.isBlank()) {
-                response = this.wishlistService.findWishlistByClientDocumento(documento.trim());
+                response = this.wishlistService.findWishlistByClienteDocumento(documento.trim());
             } else {
                 response = this.wishlistService.existsCodbarraOnClientWishList(documento.trim(), codbarra.trim());
             }
