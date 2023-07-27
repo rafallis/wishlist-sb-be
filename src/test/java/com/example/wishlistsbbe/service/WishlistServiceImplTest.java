@@ -58,7 +58,7 @@ public class WishlistServiceImplTest {
     @Test
     void shouldFindWishlistByClientDocumento() {
         when(wishlistRepository.findByDocumento(anyString())).thenReturn(wishlist);
-        ResponseDTO responseDTO = wishlistService.findWishlistByClientDocumento("client1");
+        ResponseDTO responseDTO = wishlistService.findWishlistByClienteDocumento("client1");
         assertEquals(wishlist, responseDTO.getBody());
     }
 

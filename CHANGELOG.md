@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/rafallis/wishlist-sb-be/compare/v1.2.0...v1.3.0) (2023-07-27)
+
+
+### Features
+
+* corrigido spell document -> documento ([b04b7f6](https://github.com/rafallis/wishlist-sb-be/commit/b04b7f66ce436f3aa1addc293b4b340263372b2e))
+* criada documentacão do servico de Wishlist ([123208e](https://github.com/rafallis/wishlist-sb-be/commit/123208ee6112fc9ebb8e24f0744377f3630d7a6b))
+
 ## [1.2.0](https://github.com/rafallis/wishlist-sb-be/compare/v1.1.0...v1.2.0) (2023-07-27)
 
 

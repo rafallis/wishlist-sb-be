@@ -33,7 +33,7 @@ public class WishlistServiceImpl implements WishlistService {
     }
 
     @Override
-    public ResponseDTO findWishlistByClientDocumento(String documento) {
+    public ResponseDTO findWishlistByClienteDocumento(String documento) {
         log.info("=> buscando Wishlist do cliente {}", documento);
 
         ResponseDTO response;
